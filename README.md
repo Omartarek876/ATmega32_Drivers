@@ -6,7 +6,7 @@ This repository contains a collection of drivers for the ATmega32 microcontrolle
 
 ## Features
 
-- **Modular Driver Architecture**: Organized drivers for ATmega32 microcontroller peripherals like GPIO, UART, SPI, I2C, ADC, and more.
+- **Modular Driver Architecture**: Organized drivers for ATmega32 microcontroller peripherals like GPIO, UART, SPI, I2C, ADC, PWM, Timers, External Interrupts, EEPROM, and Watchdog Timer.
 - **Sensor Modules**: Easy-to-use drivers for common sensors such as temperature, humidity, and distance sensors.
 - **External Devices**: Drivers for integrating external devices such as LCD displays, keypads, and more.
 - **Well-Documented Code**: Each driver is accompanied by a detailed description of usage and configuration.
@@ -30,6 +30,21 @@ This repository contains a collection of drivers for the ATmega32 microcontrolle
 - **ADC (Analog-to-Digital Converter)**
   - 10-bit resolution
   - Multiple channel selection
+- **PWM (Pulse Width Modulation)**
+  - Fast PWM and Phase Correct PWM modes
+  - Adjustable duty cycle for servo motors, DC motors, and LEDs
+- **Timers/Counters**
+  - Timer0, Timer1, and Timer2 with configurable modes (Normal, CTC, PWM)
+  - Interrupt and non-interrupt modes
+- **External Interrupts**
+  - INT0, INT1, INT2 configuration
+  - Rising, falling edge, and level-triggered interrupts
+- **EEPROM (Electrically Erasable Programmable Read-Only Memory)**
+  - Read/write operations for non-volatile data storage
+  - Byte-level access
+- **Watchdog Timer (WDT)**
+  - System reset functionality on time-out
+  - Configurable time intervals
 
 ### External Devices
 
@@ -43,6 +58,11 @@ This repository contains a collection of drivers for the ATmega32 microcontrolle
   - PWM generation for angle control
 - **DC Motor Control**
   - H-bridge integration for direction and speed control
+- **Buzzer**
+  - Simple tone generation using PWM or timer
+- **7-Segment Display**
+  - Single and multiplexed mode support
+  - Supports both common cathode and common anode configurations
 
 ### Sensor Modules
 
@@ -55,6 +75,9 @@ This repository contains a collection of drivers for the ATmega32 microcontrolle
 - **IR Sensor**
   - Obstacle detection using infrared light
   - Configurable threshold values
+- **LDR (Light Dependent Resistor)**
+  - Light intensity measurement
+  - ADC-based analog value conversion
 
 ## Getting Started
 
@@ -68,6 +91,6 @@ To get started with the drivers, ensure you have:
 
 ### Installation
 
-- Clone the repository:
+ Clone the repository:
    ```bash
    git clone https://github.com/your-username/atmega32-drivers.git
